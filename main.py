@@ -26,7 +26,8 @@ def main():
     grafo = Grafo()
     grafo.ler(ARQUIVO_1)
 
-    algoritmos.edmonds_karp(grafo, EX_1_FONTE, EX_1_SORVEDOURO)
+    fluxo_maximo = algoritmos.edmonds_karp(grafo, EX_1_FONTE, EX_1_SORVEDOURO)
+    print(f"Fluxo máximo: {fluxo_maximo}")
 
     print("\n")
 
