@@ -88,7 +88,11 @@ class Grafo:
 
             u = int(line[0])-1
             v = int(line[1])-1
-            peso = float(line[2])
+
+            if len(line) > 2:
+                peso = float(line[2])
+            else:
+                peso = 1
 
             self.arestas[u][v] = peso
             if not self.dirigido:

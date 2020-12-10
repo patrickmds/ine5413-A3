@@ -12,7 +12,7 @@ def main():
     # Para usar outros arquivos, basta apenas substituir o nome nas variáveis abaixo
 
     ARQUIVO_1 = "db128-alt.gr" # Trocar para o nome do arquivo usado no exercício 1, dirigido e ponderado
-    ARQUIVO_2 = "ex_grafo_1.txt" # Trocar para o nome do arquivo usado no exercício 2, grafo bipartido, não-dirigido e não-ponderado
+    ARQUIVO_2 = "gr128_10-alt.gr" # Trocar para o nome do arquivo usado no exercício 2, grafo bipartido, não-dirigido e não-ponderado
     ARQUIVO_3 = "ex_grafo_2.txt" # Trocar para o nome do arquivo usado no exercício 3, não-dirigido e não-ponderado
 
     EX_1_FONTE = 0
@@ -31,16 +31,16 @@ def main():
 
     print("\n")
 
-    # print("------------------------------------------")
-    # print("Exercício 2: Hopcroft-Karp")
-    # print("------------------------------------------")
+    print("------------------------------------------")
+    print("Exercício 2: Hopcroft-Karp")
+    print("------------------------------------------")
 
-    # grafo = Grafo()
-    # grafo.ler(ARQUIVO_2)
+    grafo = Grafo()
+    grafo.ler(ARQUIVO_2)
 
-    # algoritmos.hopkroft_karp(grafo)
+    algoritmos.hopcroft_karp(grafo)
 
-    # print("\n")
+    print("\n")
 
     # print("------------------------------------------")
     # print("Exercício 3: Coloração dos vertices")

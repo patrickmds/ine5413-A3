@@ -11,7 +11,7 @@ def edmonds_karp(grafo, v_inicial, v_sorvedouro):
                 rede_residual[u][v] = 0
 
 
-    caminho_aumentante = busca_em_largura_alt(grafo,v_inicial, v_sorvedouro, rede_residual)
+    caminho_aumentante = busca_em_largura_fluxo(grafo,v_inicial, v_sorvedouro, rede_residual)
 
     total_caminhos = 0
     fluxo_maximo = 0
@@ -36,19 +36,29 @@ def edmonds_karp(grafo, v_inicial, v_sorvedouro):
             rede_residual[IN][OUT] += fluxo_caminho
         
         total_caminhos += 1
-        caminho_aumentante = busca_em_largura_alt(grafo,v_inicial, v_sorvedouro, rede_residual)
+        caminho_aumentante = busca_em_largura_fluxo(grafo,v_inicial, v_sorvedouro, rede_residual)
         
     # print(f"Total de caminhos: {total_caminhos}")
     # print(f"Fluxo máximo: {fluxo_maximo}")
     return fluxo_maximo
 
 def hopcroft_karp(grafo):
+    distancias = [float("inf") for x in range(len(grafo.vertices))]
+    mates = [None for x in range(len(grafo.vertices))]
+
+    busca_em_largura_emparelhamento(grafo, mates, distancias)
+
+
+
+
+
+
     return
 
 def coloracao(grafo):
     return
 
-def busca_em_largura_alt(grafo, v_inicial, v_sorvedouro, rede_residual):
+def busca_em_largura_fluxo(grafo, v_inicial, v_sorvedouro, rede_residual):
     visitados = [False for x in range(len(grafo.vertices))]
     antecessores = [None for x in range(len(grafo.vertices))]
 
@@ -83,6 +93,7 @@ def busca_em_largura_alt(grafo, v_inicial, v_sorvedouro, rede_residual):
 
 def minimo(valores):
 
+
     if valores == None or len(valores)<1:
         print("Erro ao retornar valor mínimo")
         return None
@@ -93,3 +104,21 @@ def minimo(valores):
             resultado = valor
 
     return resultado
+
+
+def busca_em_largura_emparelhamento(grafo, mates, distancias):
+    Q = []
+    X = (int)(grafo.qtd_vertices()/2 - 1)
+    
+    print(f"X: de 0 a {X}")
+
+    for x in range(X+1):
+        if mates[x]== None:
+            distancias[x] = 0
+            Q.append(x)
+        else:
+            distancias[x] = (int)(float("inf"))
+
+    return
+
+
