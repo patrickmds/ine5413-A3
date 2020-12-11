@@ -98,6 +98,8 @@ class Grafo:
     def printar_matriz_adj(self):
         vertices = list(self.vertices.values())
 
+        print(self.vertices)
+        print(self.arestas)
         header = "  |"
         for rotulo in vertices:
             header += f" {rotulo} "
@@ -120,6 +122,8 @@ class Grafo:
 
         return arestas_transpostas
 
+    def __str__(self):
+        self.printar_matriz_adj()
 
 
 
