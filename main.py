@@ -44,7 +44,8 @@ def main():
     grafo = Grafo()
     grafo.ler(ARQUIVO_3)
 
-    algoritmos.coloracao(grafo)
+    print(algoritmos.lawler(grafo))
+    algoritmos.conjuntos_independentes_maximais(grafo)
 
 
 
