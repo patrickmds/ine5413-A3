@@ -42,14 +42,14 @@ def main():
 
     print("\n")
 
-    # print("------------------------------------------")
-    # print("Exercício 3: Coloração dos vertices")
-    # print("------------------------------------------")
+    print("------------------------------------------")
+    print("Exercício 3: Coloração dos vertices")
+    print("------------------------------------------")
 
-    # grafo = Grafo()
-    # grafo.ler(ARQUIVO_3)
+    grafo = Grafo()
+    grafo.ler(ARQUIVO_3)
 
-    # algoritmos.coloracao(grafo)
+    algoritmos.coloracao(grafo)
 
 
 
