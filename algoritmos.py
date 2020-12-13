@@ -59,9 +59,6 @@ def hopcroft_karp(grafo):
     print(f"Emparelhamento máximo: {m}")
     return mates
 
-def coloracao(grafo):
-    return
-
 def busca_em_largura_fluxo(grafo, v_inicial, v_sorvedouro, rede_residual):
     visitados = [False for x in range(len(grafo.vertices))]
     antecessores = [None for x in range(len(grafo.vertices))]

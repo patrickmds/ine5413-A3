@@ -49,8 +49,9 @@ def main():
     grafo = Grafo()
     grafo.ler(ARQUIVO_3)
 
-    algoritmos.coloracao(grafo)
-
+    cores = algoritmos.lawler(grafo)
+    print(f"Cores mínimas: {cores}")
+    
 
 
 if __name__ == "__main__":
